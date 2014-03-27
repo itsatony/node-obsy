@@ -16,19 +16,20 @@ setInterval(
 
 setTimeout(
 	function() {
-		vws.syncMe.d = 'reverse';
+		vws.syncMe.d = ['reverse',1];
 	},
 	4500
-);
-setTimeout(
-	function() {
-		delete vws.syncMe.b;
-	},
-	6500
 );
 setTimeout(
 	function() {
 		vws.syncMe.g = new Buffer('bbbbuuuuuuuufffffeeeeerrrrr');
 	},
 	7500
+);
+
+setTimeout(
+	function() {
+		delete vws.syncMe.b;
+	},
+	9500
 );
