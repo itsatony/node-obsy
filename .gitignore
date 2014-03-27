@@ -11,5 +11,11 @@ pids
 logs
 results
 
+include
+bin
+share
+
+ChangeLog
+
 npm-debug.log
 node_modules
