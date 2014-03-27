@@ -1,0 +1,32 @@
+{
+	"name"          : "node-obsy",
+	"description"   : "atomic object/namespace sync across processes using observe and redis",
+	"url"           : "http://github.com/itsatony/node-obsy",
+	"keywords"      : ["sync" "redis", "observe", "javascript", "harmony", "cross-process"],
+	"author"        : "Toni Wagner <i@itsatony.com>",
+	"contributors"  : [],
+	"licenses"      : ["GPLv2"],
+	"dependencies"  : [
+		"hiredis ": "latest",
+		"redis": "0.10.1",
+		"observed": "0.0.3",
+	],
+	"main"          : "./lib/escalator",
+	"version"       : "0.0.1",
+	"directories"   : { "lib": "./lib/node-obsy.js" },
+	"engines"       : { "node": ">=0.11.0" },
+	"scripts": {
+    "test": "node_modules/mocha/bin/mocha --harmony"
+  },
+	"bugs": {
+    "url":"https://github.com/itsatony/node-obsy/issues/new"
+  },
+	"repository": {
+    "type": "git",
+    "url": "git://github.com/itsatony/node-obsy.git"
+  },
+  "devDependencies": {
+		"mocha": "latest",
+		"should": "latest"
+  }
+}
