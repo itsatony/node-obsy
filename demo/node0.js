@@ -16,7 +16,7 @@ setInterval(
 	1000
 );
 
-/* 
+
 setTimeout(
 	function() {
 		vws.syncMe.a = 1;
@@ -45,4 +45,5 @@ setTimeout(
 		process.exit();
 	},
 	15000
-);  */
+);
+
