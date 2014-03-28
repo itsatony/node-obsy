@@ -4,6 +4,9 @@ var vws = {
 	syncMe: {}
 };
 var myObjectSync = new ObSy('obsyTest1', vws.syncMe);
+myObjectSync.debug = true;
+
+// myObjectSync.empty();
 
 setInterval(
 	function() {
@@ -13,6 +16,7 @@ setInterval(
 	1000
 );
 
+/* 
 setTimeout(
 	function() {
 		vws.syncMe.a = 1;
@@ -28,3 +32,17 @@ setTimeout(
 	},
 	3000
 );
+
+setTimeout(
+	function() {
+		
+	},
+	11000
+);
+
+setTimeout(
+	function() {
+		process.exit();
+	},
+	15000
+);  */

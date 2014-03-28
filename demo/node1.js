@@ -1,10 +1,10 @@
 // n use 0.11.12 --harmony node1.js
-
 var ObSy = require('../lib/obsy');
 var vws = {
 	syncMe: {}
 };
 var myObjectSync = new ObSy('obsyTest1', vws.syncMe);
+myObjectSync.debug = true;
 
 setInterval(
 	function() {
@@ -16,7 +16,7 @@ setInterval(
 
 setTimeout(
 	function() {
-		vws.syncMe.d = ['reverse',1];
+		vws.syncMe.d = ['reverse','nla,blu',1];
 	},
 	4500
 );
@@ -32,4 +32,11 @@ setTimeout(
 		delete vws.syncMe.b;
 	},
 	9500
+);
+
+setTimeout(
+	function() {
+		process.exit();
+	},
+	15000
 );
