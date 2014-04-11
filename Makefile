@@ -1,7 +1,8 @@
 test:
 	./node_modules/.bin/mocha \
+		--harmony \
 		--timeout 60000 \
-		--reporter spec 
+		--reporter spec \
 		test/test.js
 
 .PHONY: test

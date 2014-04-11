@@ -1,7 +1,9 @@
 // n use 0.11.12 --harmony node0.js
 var ObSy = require('../lib/obsy');
 var vws = {
-	syncMe: {}
+	syncMe: {
+		x: 17
+	}
 };
 var myObjectSync = new ObSy('obsyTest1', vws.syncMe);
 myObjectSync.debug = true;
