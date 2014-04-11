@@ -4,12 +4,12 @@ ObSy
 
 ## atomic ObjectSync across nodeJS processes
 The idea behind ObSy is that there are many cases where one has different nodeJS processes that need to share 'memory'.
-ObSy greatly simplifies sharing a namespace/object between processes by turining the task into 1 line of code.
+ObSy greatly simplifies sharing a namespace/object between processes by turning the task into ONE LINE OF CODE.
 
 
 ### how ObSy works
-ObSy uses the observed library (the new/upcoming ECMA harmony Object.observe method) to handle changes to a local namespace. Those changes are then sent to a redis for persistence and, via publish/subscribe, to other processes that registered the same namespace.
-Changes are encoded, so that they are (pseudo-) atomic, meaning that changes to a deep property does not require syncing the compelte object. 
+ObSy uses the observed library (the new/upcoming ECMA harmony Object.observe method) to handle changes to a local namespace. Those changes are then sent to a redis instance for persistence and, via publish/subscribe, to other processes that registered the same namespace.
+Changes are encoded, so that they are (pseudo-) atomic, meaning that changes to a deep property do not require syncing the complete object. 
 
 
 ### limitations
@@ -19,11 +19,16 @@ Changes are encoded, so that they are (pseudo-) atomic, meaning that changes to 
 
 
 ### requirements
-ObSy needs nodeJS 0.11+ to work (harmony required to allow Object.observe) and a redis instance reachable from all processes that want to sync and object
+ObSy needs nodeJS 0.11+ to work (harmony required to allow Object.observe) and a redis instance reachable from all processes that want to sync the object
+
+
+### planned features
+- plugin system for object constructor helpers
+- option to use passive publishing via redis' built-in Redis Keyspace Notifications
 
 
 ### version
-ObSy is very early and hardly tested. Tests are next on the ToDo list (see issues).
+0.02 : ObSy is really young and innocent. it's hardly tested and not at all optimized. better test coverage is next on the ToDo list (see issues).
 
 
 ### installing
@@ -34,7 +39,7 @@ npm install obsy
 
 ### tests
 ````
-make test
+make
 ````
 
 
